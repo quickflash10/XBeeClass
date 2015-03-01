@@ -169,7 +169,7 @@ namespace XBeeClass
                     case 0x8A:
                         ModemStatusFrames.Enqueue(new ModemStatus(R));
                         break;
-                    case 0x99:
+                    case 0x90:
                         ReceivePacket Rp = new ReceivePacket(R);
                         bool Rpadded = false;
                         foreach (XBeeModule X in Modules)

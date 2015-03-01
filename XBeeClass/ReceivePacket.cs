@@ -15,7 +15,7 @@ namespace XBeeClass
         private byte Options;
         public ReceivePacket(XBeeAPIFrame FrameIn)
         {
-            if (FrameIn.getAPIID() == 0x99)
+            if (FrameIn.getAPIID() == 0x90)
             {
                 Raw = false;
 

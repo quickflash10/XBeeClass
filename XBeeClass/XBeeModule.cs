@@ -78,10 +78,12 @@ namespace XBeeClass
         {
             if (MY != null)
             {
+                Address16.Clear();
                 Address16.AddRange(MY);
             }
             if (ParentNetworkAddress != null)
             {
+                PNA.Clear();
                 PNA.AddRange(ParentNetworkAddress);
             }
             if (Device != 5)
@@ -108,10 +110,12 @@ namespace XBeeClass
             }
             if (Profile_ID != null)
             {
+                ProfileID.Clear();
                 ProfileID.AddRange(Profile_ID);
             }
             if (Manufacturer_ID != null)
             {
+                ManufacturerID.Clear();
                 ManufacturerID.AddRange(Manufacturer_ID);
             }
             if (NI != null)
