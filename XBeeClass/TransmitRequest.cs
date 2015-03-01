@@ -48,8 +48,9 @@ namespace XBeeClass
             Options = OptionsForTransfer;
             BroadcastRadius = Radius;
             Data = DataToTransfer;
+            FrameID = Frame;
             Payload.Add(0x10);
-            Payload.Add(Frame);
+            Payload.Add(FrameID);
             foreach(byte t in To.get64bitAddress())
             {
                 Payload.Add(t);
