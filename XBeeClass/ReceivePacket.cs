@@ -54,12 +54,12 @@ namespace XBeeClass
         }
         public byte[] getDataBytesWithoutAPI()
         {
-            byte[] DB = new byte[DataBytes.Length - 1];
-            for(int i = 1; i < DataBytes.Length; i++)
-            {
-                DB[i - 1] = DataBytes[i];
-            }
-            return DB;
+            //byte[] DB = new byte[DataBytes.Length - 1];
+            //for(int i = 1; i < DataBytes.Length - 1; i++)
+            //{
+            //    DB[i] = DataBytes[i+1];
+            //}
+            return DataBytes;
         }
         public byte getOptions()
         {

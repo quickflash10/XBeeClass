@@ -181,6 +181,30 @@ namespace XBeeClass
         {
             return Name;
         }
+        public ReceivePacket getNextReceivePacket()
+        {
+            if(ReceivePacketFrames.Count > 0)
+            {
+                return ReceivePacketFrames.Dequeue();
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+        public ATRemoteResponse getNextATRemoteResponse()
+        {
+            if (ATRemoteResponseFrames.Count > 0)
+            {
+                return ATRemoteResponseFrames.Dequeue();
+            }
+            else
+            {
+                return null;
+            }
+
+        }
         public int getATRemoteResponseFrameCount() { return ATRemoteResponseFrames.Count; }
         public int getReceivePacketFrameCount() { return ReceivePacketFrames.Count; }
         public int getFramceCount() { return ReceivePacketFrames.Count + ATRemoteResponseFrames.Count; }
